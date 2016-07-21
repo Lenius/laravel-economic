@@ -18,12 +18,12 @@
 *
 */
 
-namespace Economic;
+namespace Lenius\Economic\Laravel;
 
 class Facade extends \Illuminate\Support\Facades\Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'economic';
+        return 'Economic';
     }
 }

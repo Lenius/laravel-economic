@@ -17,17 +17,18 @@
  * @link http://github.com/lenius/laravel-economic
  *
  */
-namespace Economic;
+namespace Lenius\Economic\Laravel;
 
 use Economic\API\Client;
 use Economic\API\Request;
 use Illuminate\Foundation\AliasLoader;
+use Illuminate\Support\ServiceProvider;
 
 class EconomicServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        $this->app->singleton('economic', function () {
+        $this->app->singleton('Economic', function () {
             $client = new Client('demo', 'demo');
             return new Request($client);
         });
@@ -36,7 +37,7 @@ class EconomicServiceProvider extends ServiceProvider
         $this->app->booting(function () {
         
             $loader = AliasLoader::getInstance();
-            $loader->alias('Economic', 'Economic\Facade');
+            $loader->alias('Economic', 'Lenius\Economic\Laravel\Facade');
         });
     }
 }
