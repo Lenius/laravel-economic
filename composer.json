@@ -1,0 +1,35 @@
+{
+	"name": "lenius/laravel-economic",
+	"type": "library",
+	"description": "PHP-SDK to communicate with E-Conomic rest",
+	"homepage": "https://github.com/lenius/laravel-economic",
+	"keywords": ["e-conomic", "economic", "rest"],
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Lenius",
+			"email": "info@lenius.dk"
+		}
+	],
+	"require": {
+		"php": ">=5.5.9",
+		"lenius/economic-php-client": "^1.0",
+		"laravel/framework": "5.*"
+	},
+	"autoload": {
+		"psr-4": {
+			"Economic\\": "Economic/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Economic\\Tests\\": "Tests/api/"
+		}
+	},
+	"require-dev" : {
+		"php": ">=5.5.0",
+		"phpunit/phpunit": "4.8.*@dev",
+		"squizlabs/php_codesniffer": "2.*",
+		"satooshi/php-coveralls": "dev-master"
+	}
+}
